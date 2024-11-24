@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #c8f9e1;
+}
+
+.wrapper {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*   border: 1px solid #ffbabe; */
+}
+
+.child1,
+.child2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.child2 {
+  right: 0;
+}
+
+.leftSide,
+.rightSide {
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  background: #f4565f;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+  opacity: 1;
+  box-shadow: 0px 0px 7px black;
+  border-radius: 20px;
+  will-change: transform, opacity;
+}
+
+.leftSide {
+  right: 0;
+  transform: translateY(-50%) translateX(0%) scale(1);
+}
+
+.rightSide {
+  left: 0;
+  transform: translateY(-50%) translateX(0%) scale(1);
+}
+
+.swipeToRight {
+  transform: translateY(-50%) translateX(50%) scale(0.8);
+  opacity: 0;
+}
+
+.swipeToLeft {
+  transform: translateY(-50%) translateX(-50%) scale(0.8);
+  opacity: 0;
+}
+
+span {
+  position: absolute;
+  color: white;
+  text-shadow: 0px 0px 0px black;
+  transform: translateY(0);
+  transition: 0.2s ease-in-out;
+}
+
+span:hover {
+  transform: translateY(-2px);
+  text-shadow: 0px 2px 1px black;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+  cursor: pointer;
+  /*   z-index: 9999999999; */
+  font-size: 16px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.icon1 {
+  left: 20%;
+}
+
+.icon3 {
+  left: auto;
+  right: 50%;
+}
+
+.icon4 {
+  left: auto;
+  right: 20%;
+}
+
+.mainCircle {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #f4565f;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 6px black;
+}
+
+.lineTop,
+.lineBottom {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.down {
+  transform: translateX(-50%) translateY(-150%);
+}
+
+.up {
+  transform: translateX(-50%) translateY(150%);
+}
